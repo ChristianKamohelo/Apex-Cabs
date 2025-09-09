@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #FFD700; /* gold - luxury gold for CTAs and conversion moments */
+  --color-primary-50: #FFFEF7; /* gold-50 */
+  --color-primary-100: #FFFBEB; /* gold-100 */
+  --color-primary-200: #FFF4CC; /* gold-200 */
+  --color-primary-300: #FFEB99; /* gold-300 */
+  --color-primary-400: #FFE066; /* gold-400 */
+  --color-primary-500: #FFD700; /* gold-500 */
+  --color-primary-600: #E6C200; /* gold-600 */
+  --color-primary-700: #CCAD00; /* gold-700 */
+  --color-primary-800: #B39900; /* gold-800 */
+  --color-primary-900: #998500; /* gold-900 */
+
+  /* Secondary Colors */
+  --color-secondary: #2C2C2C; /* gray-800 - sophisticated charcoal for section backgrounds */
+  --color-secondary-50: #F9F9F9; /* gray-50 */
+  --color-secondary-100: #F3F3F3; /* gray-100 */
+  --color-secondary-200: #E6E6E6; /* gray-200 */
+  --color-secondary-300: #CCCCCC; /* gray-300 */
+  --color-secondary-400: #999999; /* gray-400 */
+  --color-secondary-500: #666666; /* gray-500 */
+  --color-secondary-600: #4D4D4D; /* gray-600 */
+  --color-secondary-700: #333333; /* gray-700 */
+  --color-secondary-800: #2C2C2C; /* gray-800 */
+  --color-secondary-900: #1A1A1A; /* gray-900 */
+
+  /* Accent Colors */
+  --color-accent: #FFFFFF; /* white - pure white for premium contrast and text clarity */
+  
+  /* Background Colors */
+  --color-background: #1A1A1A; /* gray-900 - deep luxury black for premium positioning */
+  --color-surface: #262626; /* gray-800 - elevated dark surface for cards and sections */
+  
+  /* Text Colors */
+  --color-text-primary: #FFFFFF; /* white - maximum contrast for effortless scanning */
+  --color-text-secondary: #B8B8B8; /* gray-400 - supporting text without distraction */
+  
+  /* Status Colors */
+  --color-success: #00C851; /* green-500 - positive reinforcement for form completions */
+  --color-warning: #FF8800; /* orange-500 - scarcity indicators for limited inventory */
+  --color-error: #FF4444; /* red-500 - form validation clarity only */
+  
+  /* Border Colors */
+  --color-border: #333333; /* gray-700 - minimal borders for form fields and sections */
+}
+
+@layer base {
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-black font-montserrat font-semibold px-8 py-4 rounded-lg transition-all duration-250 ease-in-out;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+  }
+  
+  .btn-primary:hover {
+    @apply bg-primary-600 transform -translate-y-1;
+    box-shadow: 0 6px 16px rgba(255, 215, 0, 0.4);
+  }
+  
+  .card-luxury {
+    @apply bg-surface rounded-lg p-6;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  }
+  
+  .text-luxury {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .border-luxury {
+    border: 1px solid var(--color-border);
+  }
+  
+  .fade-in {
+    animation: fadeIn 300ms ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer utilities {
+  .transition-luxury {
+    transition: all 250ms ease-in-out;
+  }
+  
+  .shadow-luxury {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  }
+  
+  .shadow-cta {
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+  }
+}
